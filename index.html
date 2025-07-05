@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js"
+      defer
+    ></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-md bg-white sticky top-0 z-50">
+      <h1 class="text-2xl font-bold tracking-tight">Portfolio</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#about" class="hover:text-indigo-600 transition">About</a>
+        <a href="#work" class="hover:text-indigo-600 transition">Work</a>
+        <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
+        <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+      </nav>
+      <button class="md:hidden" @click="open = !open" x-data="{ open: false }">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+      <h2 class="text-4xl md:text-6xl font-bold leading-tight">Crafting Clean Visuals & Thoughtful UX</h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-xl">
+        I’m a multidisciplinary designer — passionate about Graphic Design, UI/UX Design, and Film & Television.
+      </p>
+      <a href="#work" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition">
+        View My Work
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="px-6 py-20 bg-white">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-3xl font-semibold mb-4">About Me</h3>
+        <p class="text-gray-600">
+          I’m a creative professional with a strong foundation in graphic design, user interface and experience design, and storytelling through film and television. My work blends simplicity with purpose, ensuring every element speaks clearly and beautifully.
+        </p>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="px-6 py-20 bg-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-semibold text-center mb-10">Featured Projects</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
+            <h4 class="text-xl font-medium mb-2">Brand Identity for AutoCo</h4>
+            <p class="text-gray-600 text-sm">Full branding suite for a vehicle parts importer.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
+            <h4 class="text-xl font-medium mb-2">UI/UX for E-Commerce App</h4>
+            <p class="text-gray-600 text-sm">Minimalist, intuitive shopping experience for a fashion startup.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-6">
+            <h4 class="text-xl font-medium mb-2">Short Film Production</h4>
+            <p class="text-gray-600 text-sm">Directed, edited, and designed visuals for a narrative-driven short film.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="px-6 py-20 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-semibold mb-6">My Toolkit</h3>
+        <div class="flex flex-wrap justify-center gap-6 text-gray-700">
+          <span class="bg-gray-100 px-4 py-2 rounded-full">Figma</span>
+          <span class="bg-gray-100 px-4 py-2 rounded-full">Adobe XD</span>
+          <span class="bg-gray-100 px-4 py-2 rounded-full">Photoshop</span>
+          <span class="bg-gray-100 px-4 py-2 rounded-full">Illustrator</span>
+          <span class="bg-gray-100 px-4 py-2 rounded-full">Premiere Pro</span>
+          <span class="bg-gray-100 px-4 py-2 rounded-full">After Effects</span>
+          <span class="bg-gray-100 px-4 py-2 rounded-full">HTML/CSS</span>
+          <span class="bg-gray-100 px-4 py-2 rounded-full">Tailwind</span>
+          <span class="bg-gray-100 px-4 py-2 rounded-full">JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="px-6 py-20 bg-gray-100">
+      <div class="max-w-xl mx-auto text-center">
+        <h3 class="text-3xl font-semibold mb-4">Let’s Collaborate</h3>
+        <p class="text-gray-600 mb-6">Have an idea or project? Let’s build something great together.</p>
+        <a href="mailto:isuru@example.com" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition">
+          Email Me
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-6 text-center text-gray-500 text-sm">
+      &copy; 2025 Portfolio. All rights reserved.
+    </footer>
+  </body>
+</html>
